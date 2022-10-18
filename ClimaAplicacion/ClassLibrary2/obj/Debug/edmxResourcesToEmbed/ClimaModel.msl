@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClimaDBModelStoreContainer" CdmEntityContainer="ClimaDBEntities">
+    <EntitySetMapping Name="Ciudad">
+      <EntityTypeMapping TypeName="ClimaDBModel.Ciudad">
+        <MappingFragment StoreEntitySet="Ciudad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clima">
+      <EntityTypeMapping TypeName="ClimaDBModel.Clima">
+        <MappingFragment StoreEntitySet="Clima">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="temperaturaCentigrados" ColumnName="temperaturaCentigrados" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

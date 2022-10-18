@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimaAplicacion", "ClimaAplicacion\ClimaAplicacion.csproj", "{CA9C4831-0D96-41B1-A61B-02EC80641807}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5E1E474E-F468-471F-B905-F032172AF2EF} = {5E1E474E-F468-471F-B905-F032172AF2EF}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Negocio", "Negocio", "{82FCEC1F-DDD0-43DC-96D2-52FB3A066530}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Datos", "Datos", "{BD179365-4B68-4165-B946-4F38603876D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimaDatos", "ClassLibrary2\ClimaDatos.csproj", "{12D1E901-B0FE-447C-B9E8-4B67911C8A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimaAccesoDatos", "AccesoDatos\ClimaAccesoDatos.csproj", "{770622FB-8525-4995-9764-1AD275BA8189}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimaServicio", "ClimaServicio\ClimaServicio.csproj", "{5E1E474E-F468-471F-B905-F032172AF2EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA9C4831-0D96-41B1-A61B-02EC80641807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9C4831-0D96-41B1-A61B-02EC80641807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9C4831-0D96-41B1-A61B-02EC80641807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9C4831-0D96-41B1-A61B-02EC80641807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D1E901-B0FE-447C-B9E8-4B67911C8A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D1E901-B0FE-447C-B9E8-4B67911C8A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D1E901-B0FE-447C-B9E8-4B67911C8A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D1E901-B0FE-447C-B9E8-4B67911C8A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{770622FB-8525-4995-9764-1AD275BA8189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770622FB-8525-4995-9764-1AD275BA8189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770622FB-8525-4995-9764-1AD275BA8189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770622FB-8525-4995-9764-1AD275BA8189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1E474E-F468-471F-B905-F032172AF2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1E474E-F468-471F-B905-F032172AF2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1E474E-F468-471F-B905-F032172AF2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1E474E-F468-471F-B905-F032172AF2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{12D1E901-B0FE-447C-B9E8-4B67911C8A82} = {BD179365-4B68-4165-B946-4F38603876D5}
+		{770622FB-8525-4995-9764-1AD275BA8189} = {BD179365-4B68-4165-B946-4F38603876D5}
+		{5E1E474E-F468-471F-B905-F032172AF2EF} = {82FCEC1F-DDD0-43DC-96D2-52FB3A066530}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CC493DC-3802-4D93-B7F9-5F93F9E485E7}
+	EndGlobalSection
+EndGlobal

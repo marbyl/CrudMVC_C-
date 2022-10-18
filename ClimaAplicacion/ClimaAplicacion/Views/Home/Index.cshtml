@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery-1.7.2.min.js"></script>
+<script src="~/Scripts/jquery.jqGrid.min.js"></script>
+<script src="~/Scripts/jquery.jqGrid.src.js"></script>
+<script src="~/Scripts/jquery.jqGrid.js"></script>
+@Scripts.Render("~/Scripts/Vistas/Clima.js")
+<div class="jumbotron">
+    <h1>Reporte del clima</h1>
+    <p class="lead">Reporte del clima</p>
+</div>
+
+<table id="listClima"></table>
+<div id="pager"></div>
+<script type="text/javascript">
+    var urlConsultarClimas = '@Url.Action("ConsultarClimas")';
+    var urlCrudClimas = '@Url.Action("CrudClimas")';
+    var urlTraerCiudades = '@Url.Action("TraerCiudades")';
+    Inicio();
+
+
+</script>

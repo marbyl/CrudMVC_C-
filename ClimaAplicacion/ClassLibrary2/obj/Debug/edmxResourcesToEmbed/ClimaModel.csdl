@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClimaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Clima" Relationship="Self.FK_Clima_Ciudad" FromRole="Ciudad" ToRole="Clima" />
+  </EntityType>
+  <EntityType Name="Clima">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="temperaturaCentigrados" Type="Int32" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idCiudad" Type="Int32" />
+    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="hora" Type="Time" Precision="7" />
+    <NavigationProperty Name="Ciudad" Relationship="Self.FK_Clima_Ciudad" FromRole="Clima" ToRole="Ciudad" />
+  </EntityType>
+  <Association Name="FK_Clima_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="0..1" />
+    <End Role="Clima" Type="Self.Clima" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Clima">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ClimaDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
+    <EntitySet Name="Clima" EntityType="Self.Clima" />
+    <AssociationSet Name="FK_Clima_Ciudad" Association="Self.FK_Clima_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Clima" EntitySet="Clima" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

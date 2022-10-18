@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClimaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Clima">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="temperaturaCentigrados" Type="int" />
+    <Property Name="descripcion" Type="varchar(max)" />
+    <Property Name="idCiudad" Type="int" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="hora" Type="time" Precision="7" />
+  </EntityType>
+  <Association Name="FK_Clima_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="0..1" />
+    <End Role="Clima" Type="Self.Clima" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Clima">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ClimaDBModelStoreContainer">
+    <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clima" EntityType="Self.Clima" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Clima_Ciudad" Association="Self.FK_Clima_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Clima" EntitySet="Clima" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

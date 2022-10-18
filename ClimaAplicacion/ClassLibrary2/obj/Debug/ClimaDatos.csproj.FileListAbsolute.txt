@@ -1,0 +1,12 @@
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\bin\Debug\ClassLibrary2.dll.config
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\bin\Debug\EntityFramework.dll
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\obj\Debug\ClimaDatos.csproj.CoreCompileInputs.cache
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\obj\Debug\ClimaDatos.csproj.CopyComplete
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\bin\Debug\EntityFramework.xml
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\marby\source\repos\ClimaAplicacion\ClassLibrary2\obj\Debug\ClimaDatos.csproj.AssemblyReference.cache
